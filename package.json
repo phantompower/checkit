@@ -1,7 +1,7 @@
 {
   "name": "writewell",
   "description": "Simple text proofreader based on 'write-good' (hemingway-app-like suggestions) and 'nodehun' (spelling).",
-  "version": "0.6.4",
+  "version": "0.7.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/phantompower/writewell/git"
@@ -23,7 +23,7 @@
     "proofread"
   ],
   "bin": {
-    "proofreader": "./bin/cmd.js"
+    "writewell": "./bin/cmd.js"
   },
   "scripts": {
     "test": "mocha specs --require specs/helpers/chai.js"
