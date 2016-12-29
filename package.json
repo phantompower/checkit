@@ -1,19 +1,19 @@
 {
-  "name": "proofreader",
+  "name": "checkit",
   "description": "Simple text proofreader based on 'write-good' (hemingway-app-like suggestions) and 'nodehun' (spelling).",
   "version": "0.6.4",
   "repository": {
     "type": "git",
-    "url": "git://github.com/kdzwinel/Proofreader.git"
+    "url": "git://github.com/phantompower/checkit/git"
   },
   "bugs": {
-    "url": "http://github.com/kdzwinel/Proofreader/issues"
+    "url": "http://github.com/phantompower/checkit/issues"
   },
   "author": "Konrad Dzwinel <kdzwinel@gmail.com>",
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/kdzwinel/Proofreader/blob/master/LICENSE"
+      "url": "https://github.com/phantompower/checkit/blob/master/LICENSE"
     }
   ],
   "keywords": [

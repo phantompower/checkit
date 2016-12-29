@@ -4,14 +4,14 @@ Checkit is a fork of Proofreader [![Build Status](https://travis-ci.org/kdzwinel
 Checkit takes a website, or a local file, and tries to proofread it using [write-good](https://github.com/btford/write-good) and [nodehun](https://github.com/nathanjsweet/nodehun).  Checkit is maintained by Andy Whitlow and Gary Stanyard.
 
 ## Installation
-    npm install proofreader -g
+    npm install checkit -g
 
 ## Examples
 
-    proofreader -u https://raw.githubusercontent.com/GoogleChrome/devtools-docs/master/docs/memory-analysis-101.html
-    proofreader -f ../devtools-docs/docs/commandline-api.md
-    proofreader -l list-of-files.txt
-    proofreader -c custom-config.json -f file.html
+    checkit -u https://raw.githubusercontent.com/GoogleChrome/devtools-docs/master/docs/memory-analysis-101.html
+    checkit -f ../devtools-docs/docs/commandline-api.md
+    checkit -l list-of-files.txt
+    checkit -c custom-config.json -f file.html
 
 Output:
 ![Console output](https://i.imgur.com/IfUw2W9.png)
@@ -20,7 +20,7 @@ Output:
 - magenta suggestions come from nodehun
 
 ## Options
-Proofreader can handle both HTML and Markdown files. It distinguishes between these two using MIME types.
+Checkit can handle both HTML and Markdown files. It distinguishes between these two using MIME types.
 
 ### --url (-u)
 Downloads and processes single remote file from given URL.
