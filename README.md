@@ -1,17 +1,17 @@
-Checkit is a fork of Proofreader [![Build Status](https://travis-ci.org/kdzwinel/Proofreader.svg)](https://travis-ci.org/kdzwinel/Proofreader) [![npm version](https://badge.fury.io/js/proofreader.svg)](http://badge.fury.io/js/proofreader)
+Writewell is a fork of Proofreader [![Build Status](https://travis-ci.org/kdzwinel/Proofreader.svg)](https://travis-ci.org/kdzwinel/Proofreader) [![npm version](https://badge.fury.io/js/proofreader.svg)](http://badge.fury.io/js/proofreader)
 ===========
 
-Checkit takes a website, or a local file, and tries to proofread it using [write-good](https://github.com/btford/write-good) and [nodehun](https://github.com/nathanjsweet/nodehun).  Checkit is maintained by Andy Whitlow and Gary Stanyard.
+Writewell takes a website, or a local file, and tries to proofread it using [write-good](https://github.com/btford/write-good) and [nodehun](https://github.com/nathanjsweet/nodehun).  Writewell is maintained by Andy Whitlow and Gary Stanyard.
 
 ## Installation
-    npm install checkit -g
+    npm install writewell -g
 
 ## Examples
 
-    checkit -u https://raw.githubusercontent.com/GoogleChrome/devtools-docs/master/docs/memory-analysis-101.html
-    checkit -f ../devtools-docs/docs/commandline-api.md
-    checkit -l list-of-files.txt
-    checkit -c custom-config.json -f file.html
+    writewell -u https://raw.githubusercontent.com/GoogleChrome/devtools-docs/master/docs/memory-analysis-101.html
+    writewell -f ../devtools-docs/docs/commandline-api.md
+    writewell -l list-of-files.txt
+    writewell -c custom-config.json -f file.html
 
 Output:
 ![Console output](https://i.imgur.com/IfUw2W9.png)
