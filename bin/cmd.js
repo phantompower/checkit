@@ -9,7 +9,7 @@ var marked = require('marked');
 var clc = require('cli-color');
 var Promise = require('promise');
 var config = require('../settings.json');
-var Proofreader = require('../lib/proofreader.js');
+var writewell = require('../lib/writewell.js');
 var SourceLoader = require('../lib/sourceloader.js');
 
 program
@@ -33,20 +33,20 @@ if (!config) {
   throw new Error('Whitelist has to be set.');
 }
 
-var proofreader = new Proofreader();
+var writewell = new writewell();
 
-proofreader.setWhitelist(config.selectors.whitelist);
-proofreader.setBlacklist(config.selectors.blacklist);
-proofreader.setWriteGoodSettings(config['write-good']);
+writewell.setWhitelist(config.selectors.whitelist);
+writewell.setBlacklist(config.selectors.blacklist);
+writewell.setWriteGoodSettings(config['write-good']);
 
 config.dictionaries['build-in'].forEach(function (dictName) {
-  proofreader.addDictionary(path.join(__dirname, '../dictionaries/' + dictName + '.dic'),
+  writewell.addDictionary(path.join(__dirname, '../dictionaries/' + dictName + '.dic'),
     path.join(__dirname, '../dictionaries/' + dictName + '.aff'));
 });
 
 if (config.dictionaries['custom']) {
   config.dictionaries['custom'].forEach(function (dictPath) {
-    proofreader.addDictionary(dictPath);
+    writewell.addDictionary(dictPath);
   });
 }
 
@@ -105,13 +105,13 @@ sourceLoader
   .then(function (sources) {
     return Promise.all(sources.map(function (source) {
       if (source.error) {
-        console.log("### Proofreader *failed* to load", source.path, "###");
+        console.log("### writewell *failed* to load", source.path, "###");
         console.log(source.error);
         console.log();
         return;
       }
 
-      return proofreader.proofread(toHTML(source.path, source.content))
+      return writewell.proofread(toHTML(source.path, source.content))
         .then(function (result) {
           printResults(source.path, result);
           return result;
